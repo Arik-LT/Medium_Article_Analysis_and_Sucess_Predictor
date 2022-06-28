@@ -1,0 +1,4 @@
+# Medium-Analysis-Capstone-General-Assembly
+# Medium_Article_Analysis_and_success_predictor
+# Medium_Article_Analysis_and_success_predictor
+# Medium_Article_Analysis_and_Sucess_Predictor
