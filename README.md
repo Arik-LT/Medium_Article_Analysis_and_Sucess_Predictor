@@ -138,18 +138,19 @@ The best model was XGBoost, it achieved an accuracy score of 0.7, with baseline 
 ![Alt text](assets/Classification_report_best_xgb.png?raw=true)
 
 - Accuracy: Accuracy score of 0.7 meaning approximately 70% of articles were correctly classified.
-- Precision: Indicates out of all those articles we considered to belong to class 1, which ones actually did belong to class 1. - _0.71_
+- Precision: Indicates out of all those articles we categorised as belonging to class 1 or 0, which ones actually did belong to class 1.
+- Recall: Recall on the other hand considers the total amount of articles that did in reality belong to class 1 or 0, and calculates how many of those we successfully classified
+- f1-score: The harmonic mean of precision and recall.
 
 ## Coefficients
 
 Title Coefficients:
-![Alt text](assets/abs_coef_title.png?raw=true) |
+![Alt text](assets/abs_coef_title.png?raw=true)
 
 Text coefficients:
-![Alt text](assets/abs_coef_text.png?raw=true) |
-
+![Alt text](assets/abs_coef_text.png?raw=true)
 Remaining coefficients:
-![Alt text](assets/absoulte_coef_normal_features.png?raw=true) |
+![Alt text](assets/absoulte_coef_normal_features.png?raw=true)
 
 ## Conclusions
 
