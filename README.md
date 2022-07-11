@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is an investigative approach into the determinants of an article's success in Medium. It was completed as part of my capstone project for the Data Science Immersive course at General Assembly. The topic was chosen as Medium has been an incredible friend ,and ally throughout this intense course and I wanted to do a deeper dive into it.
+A 4 week individual project, with the aim of investigating the determinants of an article's success in Medium. It was completed as part of my capstone project for the Data Science Immersive course at General Assembly. The topic was chosen as Medium has been an incredible friend ,and ally throughout this intense course and I wanted to do a deeper dive into it.
 
 The code for the final deployment of the model can be found here: https://github.com/Arik-LT/medium_streamlit_webapp. It is not currently deployed online as the size of the project didn't qualify for the free tier, however it is very easy to get up and running locally.
 
@@ -55,7 +55,7 @@ To acquire the data I created a web scraper using beautifulsoup, requests and ne
 To clean the data I took the following steps:
 
 - Dropped rows with missing values for the story_url feature as this implied that no text was scraped.
-- Dropped rows where the title was duplicated as some articles where posted more than once on different days.
+- Dropped rows where the title was duplicated as some articles were posted more than once on different days.
 - Transformed claps and followers into integers accordingly.
 - Extracted the author handle from the author url using regex.
 - Created a datetime object from the date and extracted the day of the week.
@@ -185,11 +185,12 @@ Importance of EDA and of planning the workflow
 
 ## Libraries used
 
-- xgboost==1.6.1
-- scikit-learn==1.1.1
-- scipy==1.8.1
-- requests==2.28.0
-- nltk==3.7
-- numpy==1.22.4
-- pandas==1.4.2
-- textblob==0.17.1
+- xgboost
+- scikit-learn
+- scipy
+- requests
+- nltk
+- numpy
+- pandas
+- textblob
+- bs4
