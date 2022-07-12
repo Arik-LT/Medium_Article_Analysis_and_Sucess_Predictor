@@ -59,7 +59,7 @@ To clean the data I took the following steps:
 - Transformed claps and followers into integers accordingly.
 - Extracted the author handle from the author url using regex.
 - Created a datetime object from the date and extracted the day of the week.
-- Ensured all articles where in english using the langdetect package
+- Ensured all articles were in English using the langdetect package.
 
 Finally to be able to use NLP on the text in the most efficient way I cleaned the text and title features:
 
@@ -74,7 +74,7 @@ Features added to the dataset:
 
 - Publication Name - Which was used as part of the for loop for the scraper and chosen by me.
 - Number of words of a given text.
-- Subjectivity - Extracted using the texblob package, sentiment analyser, subjectivity measures how opinionated an article is.
+- Subjectivity - Extracted using the "texblob" package, sentiment analyser, subjectivity measures how opinionated an article is.
 - Polarity - Extracted as above, polarity measures the positivity of a given text.
 - Day of the week the article was published.
 - I transformed the subtitle column into a binary variable where 1 means the article had a subtitle and 0 that it didn't.
@@ -117,7 +117,7 @@ Finally for the remaining features I created dummy variables where needed, like 
 - Linear SVM
 - XGBoost
 
-_ROC COMPARISON PIC HERE_
+![Alt text](assets/roc_all_models.png?raw=true)
 
 The ROC curve measures the true positive rate (TPR) versus the false positive rate, as the threshold for predicting 1 changes.
 
@@ -126,7 +126,7 @@ When the area under the curve is 0.50, this is equivalent to the baseline (chanc
 
 ## Best Results
 
-The best model was XGBoost, it achieved an accuracy score of 0.7, with baseline being 0.7. Below you can see the results of the classification report and the confusion matrix.
+The best model was XGBoost, it achieved an accuracy score of 0.7, with baseline being 0.5. Below you can see the results of the classification report and the confusion matrix.
 
 ![Alt text](assets/confusion_matrix_best_xgb.png?raw=true)
 
@@ -154,7 +154,7 @@ Remaining coefficients:
 
 ## Conclusions
 
-It was very interesting that the median amount of claps was 95. As the claps histogram showed consistent spikes at the 50 and 100 clap mark. This I believe brings extra purpose and meaning to the project as belonging to class 1 (having over 95 claps) would mean a writer would be extremely close to having the medium publication advertise the article, thereby compounding the total outreach and amount of interaction the article would get.
+It was very interesting that the median amount of claps was 95. As the claps histogram showed consistent spikes at the 50 and 100 clap mark. This I believe brings extra purpose and meaning to the project as belonging to class 1 (having over 95 claps) would mean a writer would be extremely close to having the Medium publication advertise the article, thereby compounding the total outreach and amount of interaction the article would get.
 
 Overall the model obtained an accuracy score of 0.7 which was 0.2 points over baseline.
 
@@ -162,8 +162,7 @@ And the streamlit interactive tool is quite a cool way to visualise these result
 
 ## Limitations and areas of improvement
 
-- Amount of data
-- Scrape more data for the publications with less representation
+- Amount of data, especially for the publications with less representation
 - Focus on a single publication or topic (using LDA)
 - Elastic Net for Logistic Regression - I was time constrained when doing the project with some models running over 15 hours. Adding a penalty to the logistic regression would've definitely been a good continuation of the project.
 - TF-IDF
